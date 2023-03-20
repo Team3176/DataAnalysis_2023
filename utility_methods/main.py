@@ -11,6 +11,7 @@ parser.add_argument('--get_fs',type=str,required=False)
 parser.add_argument('--get_die',type=str,required=False)
 parser.add_argument('--get_comments',type=str,required=False)
 parser.add_argument('--get_tip',type=str,required=False)
+parser.add_argument('--get_data',type=str,required=False)
 #get a column of data
 parser.add_argument('--column',type=int,required=False)
 
@@ -70,3 +71,7 @@ elif args.get_tip:
     print("If robot was tippy")
     for w in data:
         print(w)
+elif args.get_data:
+    y = args.get_data
+    data = g.get_data(y)
+    print(data)
